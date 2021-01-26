@@ -62,6 +62,7 @@
 * @return      index of device or 0xFF if no room in list
 */
 
+//初始化LED引脚对应的GPIO
 static void GPIO_Configuration(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
@@ -78,11 +79,11 @@ static void led_thread_entry(void* parameter)
     GPIO_Configuration();
     HalLedInit();
     //HalLedSet( HAL_LED_1, HAL_LED_MODE_FLASH );
-    HalLedSet( HAL_LED_2, HAL_LED_MODE_ON );
-    HalLedBlink(HAL_LED_1,0,50,2000);
+    HalLedSet(|HAL_LED_2, HAL_LED_MODE_ON ); //设置HAL_LED_2
+    HalLedBlink(HAL_LED_1,0,50,2000);		 //设置HAL_LED_1 2s间隔闪烁
     for (;;)
     {
-       HalLedUpdate();
+       HalLedUpdate();	//LED状态更新
     }
 }
 

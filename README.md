@@ -85,5 +85,5 @@
 
 ## 5、联系方式 & 感谢
 
-* 维护：ou
-* 主页：https://github.com/RT-Thread-packages/hello
+* 维护：Torchwoods
+* 主页：https://github.com/Torchwoods/rt-ledblink
