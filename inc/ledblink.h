@@ -19,9 +19,7 @@ extern "C"
 /*********************************************************************
  * INCLUDES
  */
-#include <stdint.h>
-#include <rtthread.h>
-#include <stm32f10x.h>
+#include <ledblink_conf.h>
 /*********************************************************************
  * CONSTANTS
  */
@@ -52,27 +50,10 @@ extern "C"
 #define HAL_LED_DEFAULT_FLASH_COUNT   50
 #define HAL_LED_DEFAULT_FLASH_TIME    1000
 
-#define LED1_POART  GPIOA
-#define LED1_PIN    GPIO_Pin_0
-
-#define LED2_POART  GPIOA
-#define LED2_PIN    GPIO_Pin_1
-
 /*********************************************************************
  * MACROS
  */
 
-#define st(x) do{x}while(0)
-
-#define HAL_TURN_ON_LED1()  st(GPIO_ResetBits(LED1_POART, LED1_PIN);) 
-#define HAL_TURN_ON_LED2()  st(GPIO_ResetBits(LED2_POART, LED2_PIN);) 
-#define HAL_TURN_ON_LED3()  
-#define HAL_TURN_ON_LED4()  
-
-#define HAL_TURN_OFF_LED1()  st(GPIO_SetBits(LED1_POART, LED1_PIN);) 
-#define HAL_TURN_OFF_LED2()  st(GPIO_SetBits(LED2_POART, LED2_PIN);) 
-#define HAL_TURN_OFF_LED3()  
-#define HAL_TURN_OFF_LED4() 
 /*********************************************************************
  * TYPEDEFS
  */
